@@ -1,6 +1,6 @@
 # API Golden Raspberry Awards
 
-Esta API permite obter informações sobre os vencedores do prêmio de Pior Filme do Golden Raspberry Awards.
+Esta API permite obter informações sobre os indicados do prêmio de Pior Filme do Golden Raspberry Awards.
 
 ## Como Rodar a Aplicação
 
@@ -8,7 +8,7 @@ Esta API permite obter informações sobre os vencedores do prêmio de Pior Film
 
 1. Clone o repositório:
     ```bash
-    git clone 
+    git clone JosianeAlvesPepis/golden-raspberry-awards-api
     cd golden-raspberry-awards-api
     ```
 
@@ -29,7 +29,7 @@ Esta API permite obter informações sobre os vencedores do prêmio de Pior Film
 
 1. Clone o repositório:
     ```bash
-    git clone 
+    git clone JosianeAlvesPepis/golden-raspberry-awards-api
     cd golden-raspberry-awards-api
     ```
 
