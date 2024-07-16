@@ -1,3 +1,4 @@
+import re
 from awards.models import Filme
 
 def calcular_intervalos_premios():
@@ -6,17 +7,17 @@ def calcular_intervalos_premios():
 
     Retorna um dicionário contendo os produtores com os menores e maiores intervalos entre prêmios consecutivos.
     """
+    # Filtra os filmes vencedores (vencedor = True)
     vencedores = Filme.objects.filter(vencedor=True).order_by('ano')
     intervalos = {'min': [], 'max': []}
     intervalos_produtores = {}
 
     # Agrupa os filmes vencedores por produtor
     for filme in vencedores:
-        produtores = [prod.strip() for prod in filme.produtor.split(',')]
-        for produtor in produtores:
-            if produtor not in intervalos_produtores:
-                intervalos_produtores[produtor] = []
-            intervalos_produtores[produtor].append(filme.ano)
+        produtor = filme.produtor.strip()
+        if produtor not in intervalos_produtores:
+            intervalos_produtores[produtor] = []
+        intervalos_produtores[produtor].append(filme.ano)
 
     # Calcula os intervalos para cada produtor
     for produtor, anos in intervalos_produtores.items():

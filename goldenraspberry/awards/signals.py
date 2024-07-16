@@ -23,7 +23,7 @@ def carregar_filmes(sender, **kwargs):
         with open(caminho_csv, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile, delimiter=';')  # Atualize conforme o delimitador do CSV
             for row in reader:
-                produtores = re.split(r'\s*,\s*|\s*and\s*', row['producers'])
+                produtores = re.split(r'\s*,\s*|\sand\s*', row['producers'])
                 for produtor in produtores:
                     Filme.objects.get_or_create(
                         titulo=row['title'],
