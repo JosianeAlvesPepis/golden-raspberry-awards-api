@@ -1,6 +1,6 @@
 # API Golden Raspberry Awards
 
-Esta API permite obter informações sobre os vencedores do prêmio de Pior Filme do Golden Raspberry Awards.
+Esta API permite obter informações sobre os indicados do prêmio de Pior Filme do Golden Raspberry Awards.
 
 ## Como Rodar a Aplicação
 
